@@ -19,17 +19,21 @@ class TicTacToe
     puts "-----------"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
+  
   def input_to_index(user_input)
   user_input.to_i-1
   end
+  
   def move(index, current_player="X")
   @board[index]= current_player
   end
+  
   def position_taken?(index)
   @board[index]== "X" || @board[index] == "O"
 end
+
 def valid_move?(index)
-  if !position_taken?(@board,index) && index.between?(0,8)
+  if !position_taken?(index) && index.between?(0,8)
     valid=true
   else
     valid=false
