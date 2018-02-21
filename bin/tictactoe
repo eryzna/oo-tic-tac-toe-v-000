@@ -3,14 +3,4 @@ require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
 
 TicTacToe.new
-  def play
-    while !over?
-      turn
-    end
-    if won?
-      puts "Congratulations #{winner}!"
-    elsif draw?
-      puts "Cat's Game!"
-    end
-  end
-end
+  
